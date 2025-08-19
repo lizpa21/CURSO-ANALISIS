@@ -57,3 +57,4 @@ print(dias_semana[0])  # Imprime el primer elemento de la tupla
 #convertir tupla a lista
 lista_dias = list(dias_semana)
 print(lista_dias)  # Imprime la lista convertida
+#crear una f

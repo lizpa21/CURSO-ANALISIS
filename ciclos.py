@@ -118,6 +118,7 @@ while True:
 #3.Si la contraseña ya existe el programa debe sacar un mensaje diciendo "La contraseña ya existe" y volver al paso 1
 #4.Si la contraseña no existe guardar los datos(contraseña) y sacar un mensaje diciendo "Contraseña guardada con éxito" y preguntar al usuario si desea guardar un usuario nuevo
 #5.Si la respuesta es "si" volver al paso 1, si es "no" terminar el programa con el siguiente mensaje "Gracias, fin del programa"
+
 # usar diccionario para los nombresde usuario
 
 usuarios = {}
@@ -134,6 +135,68 @@ while True:
     guardar_nuevo = input("¿Desea guardar un usuario nuevo? (si/no): ").strip().lower()
     if guardar_nuevo != 'si':
         print("Gracias, fin del programa.")
-        break"""
+        break
+#calcular el factorial de un numero usando ciclo while si la respuestas anterior es no terminar el programa y mostrar la lista de numeros factoriales calculados
+factoriales = []
+while True: 
+    numero = int(input("Ingrese un número para calcular su factorial: "))
+    factorial = 1
+    i = 1
+    while i <= numero:
+        factorial *= i
+        i += 1
+    factoriales.append((numero, factorial))
+    print(f"El factorial de {numero} es {factorial}.")
+    
+    continuar = input("¿Desea calcular otro factorial? (si/no): ").strip().lower()
+    if continuar != 'si':
+        print("Gracias, fin del programa.")
+        break
+    print("Números y sus factoriales calculados:", factoriales)
 
+"""
+#1. Escribe un programa que imprima los números del 1 al 10, uno por línea.
+for i in range(1, 11):
+    print(i)    
+#2.Escribe un programa que pida al usuario números enteros uno por uno. El programa debe seguir pidiendo números y sumándolos hasta que el usuario escriba 0. Luego debe imprimir la suma total.
+# Inicializamos la suma en 0
+suma_total = 0
+# Bucle para pedir números al usuario
+while True:
+    numero = int(input("Ingrese un número entero (0 para terminar): "))
+    if numero == 0:
+        break  # Salimos del bucle si el usuario ingresa 0
+    suma_total += numero  # Sumamos el número ingresado a la suma total
+# Imprimimos la suma total
+print(f"La suma total es: {suma_total}")
+#3.Pide al usuario un número entero y muestra su tabla de multiplicar del 1 al 10.
+numero = int(input("Ingrese un número entero para ver su tabla de multiplicar: "))
+print(f"Tabla de multiplicar del {numero}:")
+for i in range(1, 11):
+    print(f"{numero} x {i} = {numero * i}")
+# 4.El programa debe tener un número secreto. El usuario tiene que adivinarlo. Mientras no lo adivine, el programa debe seguir preguntando.
+# Número secreto
+numero_secreto = 7  # Puedes cambiar este número por cualquier otro
+# Bucle para pedir al usuario que adivine el número
+while True:
+    intento = int(input("Adivina el número secreto (entre 1 y 10): "))
+    if intento == numero_secreto:
+        print("¡Felicidades! Has adivinado el número secreto.")
+        break  # Salimos del bucle si el usuario adivina el número
+    else:
+        print("Número incorrecto. Intenta de nuevo.")   
+#5.Escribe un programa que diga si un número entero es primo o no de un número entero positivo ingresado por el usuario.
+numero = int(input("Ingrese un número entero positivo para verificar si es primo: "))
+if numero > 1:
+    es_primo = True
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            es_primo = False
+            break
+    if es_primo:
+        print(f"El número {numero} es primo.")
+    else:
+        print(f"El número {numero} no es primo.")
+else:
+    print("Por favor, ingrese un número entero positivo mayor que 1.")
 
