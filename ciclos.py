@@ -50,7 +50,7 @@ while contador >= 1:
 edades = [18, 22, 19, 25, 21, 17, 23, 20]
 for edad in edades:
     if edad > 20:
-        print(edad) """
+        print(edad) 
 #averiguar si en la sgte lista de edades hay personas con 18 años devolver mensaje si hay personas con 18 anos con for
 
 edades = [18, 18, 32, 45, 23,18, 19, 20]
@@ -65,3 +65,75 @@ if hay_personas_18:
     print("Hay personas con 18 años en la lista.")
 else:
     print("No hay personas con 18 años en la lista.")
+#RECORRER LA SGTE LISTA USANDO WHILE 
+edades = [18, 18, 32, 45, 23,18, 19, 20]
+i = 0
+while i < len(edades):
+    print(edades[i])
+    i += 1     
+#Escribir un programa de registro de usuaraios q cumpla los sgtes pasos:
+# 1. Solicitar al usuario que ingrese su nombre de usuario y contraseña.el usuario digita el nombre y la contrasena y el sistema valida si existe
+# si la contrasena existe debe sacar mensaje diciendo la contrasena existe y volver al 1
+# si no existe guardar daros contrasena y sacar un mensaje diciendo contrasena guardada con existo y preguntar al usuario si desea guardar un usuario nuevo si la respuestaes si, volver al paso 1 si es no terminar el programa con el sgte mensaje gracias fin del programa
+usuarios = {}
+while True:
+    nombre_usuario = input("Ingrese su nombre de usuario: ")
+    contrasena = input("Ingrese su contraseña: ")
+    
+    if contrasena in usuarios.values():
+        print("La contraseña ya existe. Intente con otra.")
+    else:
+        usuarios[nombre_usuario] = contrasena
+        print("Contraseña guardada con éxito.")
+    
+    guardar_nuevo = input("¿Desea guardar un usuario nuevo? (si/no): ").strip().lower()
+    if guardar_nuevo != 'si':
+        print("Gracias, fin del programa.")
+        break
+#Escribir un programa de registro de usuarios que siga o cumplacon los siguientes pasos
+
+#1.El programa pide el nombre y la contraseña
+#2.El usuario digita el nombre y la contraseña y el sistema valida si la contraseña ya existe
+#3.Si la contraseña ya existe el programa debe sacar un mensaje diciendo "La contraseña ya existe" y volver al paso 1
+#4.Si la contraseña no existe guardar los datos(contraseña) y sacar un mensaje diciendo "Contraseña guardada con éxito" y preguntar al usuario si desea guardar un usuario nuevo
+#5.Si la respuesta es "si" volver al paso 1, si es "no" terminar el programa con el siguiente mensaje "Gracias, fin del programa"
+# usar diccionario para los nombresde usuario
+usuarios = {}
+while True:     
+    nombre_usuario = input("Ingrese su nombre de usuario: ")
+    contrasena = input("Ingrese su contraseña: ")
+    
+    if contrasena in usuarios.values():
+        print("La contraseña ya existe. Intente con otra.")
+    else:
+        usuarios[nombre_usuario] = contrasena
+        print("Contraseña guardada con éxito.")
+    
+    guardar_nuevo = input("¿Desea guardar un usuario nuevo? (si/no): ").strip().lower()
+    if guardar_nuevo != 'si':
+        print("Gracias, fin del programa.")
+        break 
+    #1.El programa pide el nombre y la contraseña
+#2.El usuario digita el nombre y la contraseña y el sistema valida si la contraseña ya existe
+#3.Si la contraseña ya existe el programa debe sacar un mensaje diciendo "La contraseña ya existe" y volver al paso 1
+#4.Si la contraseña no existe guardar los datos(contraseña) y sacar un mensaje diciendo "Contraseña guardada con éxito" y preguntar al usuario si desea guardar un usuario nuevo
+#5.Si la respuesta es "si" volver al paso 1, si es "no" terminar el programa con el siguiente mensaje "Gracias, fin del programa"
+# usar diccionario para los nombresde usuario
+
+usuarios = {}
+while True:
+    nombre_usuario = input("Ingrese su nombre de usuario: ")
+    contrasena = input("Ingrese su contraseña: ")
+    
+    if contrasena in usuarios.values():
+        print("La contraseña ya existe. Intente con otra.")
+    else:
+        usuarios[nombre_usuario] = contrasena
+        print("Contraseña guardada con éxito.")
+    
+    guardar_nuevo = input("¿Desea guardar un usuario nuevo? (si/no): ").strip().lower()
+    if guardar_nuevo != 'si':
+        print("Gracias, fin del programa.")
+        break"""
+
+
